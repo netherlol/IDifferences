@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="11G56" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Differences" representedClassName="Differences" syncable="YES">
+        <attribute name="discovered" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downrightX" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="downrightY" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="upleftX" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="upleftY" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="foto" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DifferenceSet" inverseName="differences" inverseEntity="DifferenceSet" syncable="YES"/>
+    </entity>
+    <entity name="DifferenceSet" representedClassName="DifferenceSet" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="differences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Differences" inverseName="foto" inverseEntity="Differences" syncable="YES"/>
+        <relationship name="maze" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Maze" inverseName="differenceSet" inverseEntity="Maze" syncable="YES"/>
+    </entity>
+    <entity name="Difficulty" representedClassName="Difficulty" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="maze" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Maze" inverseName="dificulty" inverseEntity="Maze" syncable="YES"/>
+    </entity>
+    <entity name="Maze" representedClassName="Maze" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="besttimeminute" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="besttimesecund" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="differencesMissed" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="expectedtimeminute" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="expectedtimesecund" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="extendedAtLeastOneTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstScore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="firstTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="highestscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="missedAtLeastOneTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newColection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personalscore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="personalTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="scoreSubmeted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showLabel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeRemaining" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="uniqueID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="differenceSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DifferenceSet" inverseName="maze" inverseEntity="DifferenceSet" syncable="YES"/>
+        <relationship name="dificulty" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Difficulty" inverseName="maze" inverseEntity="Difficulty" syncable="YES"/>
+        <relationship name="pack" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Pack" inverseName="mazes" inverseEntity="Pack" syncable="YES"/>
+        <relationship name="theme" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="fotos" inverseEntity="Theme" syncable="YES"/>
+    </entity>
+    <entity name="Pack" representedClassName="Pack" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mazes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Maze" inverseName="pack" inverseEntity="Maze" syncable="YES"/>
+    </entity>
+    <entity name="Theme" representedClassName="Theme" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fotos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Maze" inverseName="theme" inverseEntity="Maze" syncable="YES"/>
+    </entity>
+    <entity name="Transactions" representedClassName="Transactions" syncable="YES">
+        <attribute name="transactionID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Differences" positionX="-3690" positionY="-1845" width="128" height="135"/>
+        <element name="DifferenceSet" positionX="-3672" positionY="-2274" width="128" height="105"/>
+        <element name="Difficulty" positionX="-3240" positionY="-2025" width="128" height="75"/>
+        <element name="Maze" positionX="-3528" positionY="-2139" width="135" height="420"/>
+        <element name="Pack" positionX="-3366" positionY="-2241" width="128" height="75"/>
+        <element name="Theme" positionX="-3836" positionY="-2034" width="128" height="105"/>
+        <element name="Transactions" positionX="-3834" positionY="-2232" width="128" height="60"/>
+    </elements>
+</model>

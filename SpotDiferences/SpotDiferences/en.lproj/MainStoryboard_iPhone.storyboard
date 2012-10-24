@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G56" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ZgW-tp-e3L">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--Inicial View Controller - Jogo Das Diferenças-->
+        <scene sceneID="eMF-ME-mBE">
+            <objects>
+                <viewController id="mm2-0f-hmP" customClass="InicialViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BP3-Ue-Lz2">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="vDh-lG-vwS">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jogo Das Diferenças" id="qW2-Zw-TxK"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="vDh-lG-vwS" id="R7N-d9-bK2"/>
+                        <segue destination="h4S-1L-SmU" kind="push" identifier="settings" id="SNr-Rg-zpk"/>
+                        <segue destination="A7W-dq-fT0" kind="push" identifier="highscores" id="xuO-nC-uJw"/>
+                        <segue destination="Ggx-vA-yls" kind="push" identifier="buy" id="TbC-Rs-Xmm"/>
+                        <segue destination="FFM-IF-Tt9" kind="push" identifier="playStyle" id="3cU-lN-pBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMa-MK-KAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1845" y="-232"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="t4i-cM-wXB">
+            <objects>
+                <viewController id="Ggx-vA-yls" customClass="BuyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBb-h7-kFd">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NSV-LD-QNb"/>
+                    <connections>
+                        <segue destination="CEX-ii-7VS" kind="push" identifier="buy detail view controller" id="hfh-Yk-dGd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBk-z8-gFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="-221"/>
+        </scene>
+        <!--High Scores View Controller-->
+        <scene sceneID="4gH-Fv-PXg">
+            <objects>
+                <viewController id="A7W-dq-fT0" customClass="HighScoresViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOR-gE-Yih">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="l4f-hm-ZJ2">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EGe-YX-of3"/>
+                    <connections>
+                        <outlet property="imageview" destination="l4f-hm-ZJ2" id="KjH-TX-n1n"/>
+                        <segue destination="4tL-UK-CLd" kind="push" identifier="no login view" id="5ep-fb-cgd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGB-9y-EHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1025" y="1580"/>
+        </scene>
+        <!--Resume Game View Controller-->
+        <scene sceneID="YGB-eh-m3X">
+            <objects>
+                <viewController id="Wo0-Gw-0is" customClass="resumeGameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZf-sl-yP5">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Eq-Sn-A15"/>
+                    <connections>
+                        <segue destination="eOX-OG-IEl" kind="push" identifier="resumed detail view" id="nwx-b1-NBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3z-1r-Fu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="-1204"/>
+        </scene>
+        <!--Account Logout View Controller-->
+        <scene sceneID="tTS-PC-q0M">
+            <objects>
+                <viewController id="wCt-MG-ICG" customClass="AccountLogoutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWt-OD-nNE">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="225"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="0h0-CQ-82X">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="225"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0c1-TI-dgy">
+                                <rect key="frame" x="20" y="45" width="440" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zaU-cK-ymg"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="0h0-CQ-82X" id="Q8w-vR-RRK"/>
+                        <outlet property="username" destination="0c1-TI-dgy" id="mP8-5E-yaf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fu6-dP-N08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="512"/>
+        </scene>
+        <!--Account Settings View Controller-->
+        <scene sceneID="Nlj-HI-Kpg">
+            <objects>
+                <tableViewController id="4TR-pU-jnk" customClass="AccountSettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="20" id="P1X-QQ-Pa0">
+                        <rect key="frame" x="0.0" y="0.0" width="232" height="186"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="7gm-tJ-bEL">
+                            <rect key="frame" x="0.0" y="120" width="232" height="146"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fub-ND-eJH">
+                                    <rect key="frame" x="52" y="0.0" width="207" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <state key="normal" title="LOGIN" backgroundImage="iDifferences-Login@2x.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="loginButtonClicked:" destination="4TR-pU-jnk" eventType="touchUpInside" id="303-N0-ZUn"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LUP-lM-5du">
+                                    <rect key="frame" x="52" y="78" width="207" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <state key="normal" title="SIGN UP" backgroundImage="iDifferences-Sign-Up@2x.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="signup:" destination="4TR-pU-jnk" eventType="touchUpInside" id="YEr-P3-JrJ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DON'T HAVE AN ACCOUNT?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ZJ-ze-ifQ">
+                                    <rect key="frame" x="52" y="57" width="207" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" contentMode="left" text="FORGOT PASSWORD?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="weM-Cr-egf">
+                                    <rect key="frame" x="52" y="125" width="207" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="BCY-w7-dF2">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8ey-LQ-zuw">
+                                        <rect key="frame" x="0.0" y="10" width="232" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="212" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" id="9HU-rR-e6W">
+                                                    <rect key="frame" x="20" y="7" width="438" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="i0K-Ca-Tqq">
+                                        <rect key="frame" x="0.0" y="55" width="232" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="212" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="fnF-kR-unX">
+                                                    <rect key="frame" x="20" y="0.0" width="440" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="4TR-pU-jnk" id="cYs-SL-qpH"/>
+                            <outlet property="delegate" destination="4TR-pU-jnk" id="RaY-8I-DiK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="na7-Zi-Lt2"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="forgotpassword" destination="weM-Cr-egf" id="fll-sb-5tb"/>
+                        <outlet property="password" destination="fnF-kR-unX" id="AUc-1X-gQc"/>
+                        <outlet property="username" destination="9HU-rR-e6W" id="EyR-w5-EnY"/>
+                        <segue destination="wCt-MG-ICG" kind="push" identifier="logged in view by login" id="B6Y-nX-xxd"/>
+                        <segue destination="eFY-o8-JcU" kind="push" identifier="recover password" id="q0a-My-WbW"/>
+                        <segue destination="hcE-ye-KRK" kind="push" identifier="sign up" id="plX-br-YAp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSY-qb-HWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897" y="976"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="CzT-Eo-g8I">
+            <objects>
+                <viewController id="hcE-ye-KRK" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FoD-5X-FHI">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="wut-PL-lSR">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <containerView contentMode="scaleToFill" id="GPA-GS-4Hz">
+                                <rect key="frame" x="20" y="41" width="270" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="oMW-8u-ePX" kind="embed" id="EEt-c0-7em"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L8C-9J-s31"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="container" destination="GPA-GS-4Hz" id="tyW-AE-Dec"/>
+                        <outlet property="imageview" destination="wut-PL-lSR" id="NUb-Lf-Ubg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENz-MS-mJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="1381"/>
+        </scene>
+        <!--Sign Up Table View Controller-->
+        <scene sceneID="ueI-S8-919">
+            <objects>
+                <tableViewController id="oMW-8u-ePX" customClass="SignUpTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="5OG-1f-5MB">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="225"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Too-YS-km3">
+                            <rect key="frame" x="0.0" y="154" width="270" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ikJ-oM-Enj">
+                                    <rect key="frame" x="49" y="6" width="173" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <state key="normal" title="SIGN UP" backgroundImage="iDifferences-Login@2x.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="signup:" destination="oMW-8u-ePX" eventType="touchUpInside" id="vxl-73-h1u"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="f4M-I2-2mc">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bv2-ED-FXN">
+                                        <rect key="frame" x="0.0" y="10" width="270" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="250" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NICKNAME" minimumFontSize="17" id="yvJ-Vw-CQZ">
+                                                    <rect key="frame" x="20" y="7" width="210" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="oMW-8u-ePX" id="JnD-mM-n02"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jhx-S5-UGJ">
+                                        <rect key="frame" x="0.0" y="55" width="270" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="250" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" minimumFontSize="17" id="b9r-WX-COR">
+                                                    <rect key="frame" x="20" y="7" width="210" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="oMW-8u-ePX" id="VJb-M3-NX9"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="C6t-nS-5qu">
+                                        <rect key="frame" x="0.0" y="99" width="270" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="250" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" minimumFontSize="17" id="E8e-pn-PSO">
+                                                    <rect key="frame" x="20" y="7" width="210" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="oMW-8u-ePX" id="YpM-uo-SeR"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="oMW-8u-ePX" id="EN7-gp-AhM"/>
+                            <outlet property="delegate" destination="oMW-8u-ePX" id="sSM-p4-s0r"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="email" destination="b9r-WX-COR" id="9hx-Tg-WbQ"/>
+                        <outlet property="nickname" destination="yvJ-Vw-CQZ" id="frt-cc-s9V"/>
+                        <outlet property="password" destination="E8e-pn-PSO" id="bJj-Ak-fFV"/>
+                        <segue destination="wCt-MG-ICG" kind="push" identifier="logged in view by login signup" id="taO-fD-YRB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njW-rO-q4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="1428"/>
+        </scene>
+        <!--Recover Password View Controller-->
+        <scene sceneID="drD-n1-trm">
+            <objects>
+                <viewController id="eFY-o8-JcU" customClass="RecoverPasswordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KvJ-jn-Ynp">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Y8u-Ub-gAn">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <containerView contentMode="scaleToFill" id="Vy3-RK-Md0">
+                                <rect key="frame" x="39" y="60" width="232" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Nzp-qq-A1v" kind="embed" id="3RW-WM-0NP"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eYj-ON-ZA2"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="container" destination="Vy3-RK-Md0" id="fuH-jy-GL8"/>
+                        <outlet property="imageview" destination="Y8u-Ub-gAn" id="AFX-Km-PqN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csL-aE-EYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2446" y="909"/>
+        </scene>
+        <!--Recover Password Table View Controller-->
+        <scene sceneID="1Fm-WG-qsi">
+            <objects>
+                <tableViewController wantsFullScreenLayout="YES" id="Nzp-qq-A1v" customClass="RecoverPasswordTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uMI-fT-BsK">
+                        <rect key="frame" x="0.0" y="0.0" width="232" height="186"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Ukd-bx-EY7">
+                            <rect key="frame" x="0.0" y="66" width="232" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TD6-yj-1vO">
+                                    <rect key="frame" x="41" y="56" width="151" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <state key="normal" title="RECOVER PASSWORD" backgroundImage="iDifferences-Recover-Password-button@2x.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="recover:" destination="Nzp-qq-A1v" eventType="touchUpInside" id="lTG-8s-yL1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="szb-lw-jbG">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Icx-B7-SaK">
+                                        <rect key="frame" x="0.0" y="10" width="232" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="212" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="L2y-he-CSF">
+                                                    <rect key="frame" x="9" y="7" width="183" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Nzp-qq-A1v" id="43T-2Z-PYO"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Nzp-qq-A1v" id="ycT-2p-3NN"/>
+                            <outlet property="delegate" destination="Nzp-qq-A1v" id="PxQ-E3-QOX"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="email" destination="L2y-he-CSF" id="6Bd-kz-J2b"/>
+                        <segue destination="4TR-pU-jnk" kind="push" identifier="recoverDone" id="bB7-7q-hDH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSh-PG-ymh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149" y="1359"/>
+        </scene>
+        <!--Contener View Controller-->
+        <scene sceneID="DPq-3e-Yqt">
+            <objects>
+                <viewController id="4tL-UK-CLd" customClass="ContenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJ2-zW-fXJ">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4Rd-oE-fQ8">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <containerView contentMode="scaleToFill" id="Q7w-Ys-XbR">
+                                <rect key="frame" x="85" y="34" width="310" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="4TR-pU-jnk" kind="embed" id="jwx-Hy-qXc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wud-4O-CuP"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="container" destination="Q7w-Ys-XbR" id="nmj-B7-OqI"/>
+                        <outlet property="imageview" destination="4Rd-oE-fQ8" id="G6M-NF-AxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNc-EA-jBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="909"/>
+        </scene>
+        <!--Main Setting View Controller-->
+        <scene sceneID="Yfv-Bg-Ebm">
+            <objects>
+                <viewController id="fyz-cV-Frr" customClass="MainSettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RXk-Wu-Ale">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" id="LwD-8M-FyN">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="8rV-uf-4FX">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="liC-WX-UIs">
+                                        <rect key="frame" x="480" y="0.0" width="480" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OSR-3a-dPN"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="gameFlowView" destination="8rV-uf-4FX" id="ejg-tT-iU1"/>
+                        <outlet property="scrollView" destination="LwD-8M-FyN" id="FQI-GZ-eLL"/>
+                        <outlet property="userPreferenceView" destination="liC-WX-UIs" id="5Xl-3A-I93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYh-7x-huE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="363"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="yBe-VI-0d1">
+            <objects>
+                <viewController id="h4S-1L-SmU" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUQ-Lw-wsn">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="HBx-p9-tyS">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zer-jY-9on"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="HBx-p9-tyS" id="thO-iq-zKF"/>
+                        <segue destination="fyz-cV-Frr" kind="push" identifier="testeSettingView" id="uzh-UF-vBc"/>
+                        <segue destination="4tL-UK-CLd" kind="push" identifier="account settings" id="vFs-a5-tsi"/>
+                        <segue destination="wCt-MG-ICG" kind="push" identifier="logout view" id="4U8-DB-7ZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kjN-HX-hkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-718" y="465"/>
+        </scene>
+        <!--Theme View Controller - Choose Theme-->
+        <scene sceneID="KKC-Wf-pZG">
+            <objects>
+                <viewController id="1Uu-oz-xSc" customClass="ThemeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iin-dt-QNd">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Theme" id="2ls-tU-Ism"/>
+                    <connections>
+                        <segue destination="tzb-RF-Vc1" kind="push" identifier="show fotos for theme" id="3hd-9A-Kjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mw7-bY-I9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-706"/>
+        </scene>
+        <!--Images For Theme Carousel View Controller - Choose Photo-->
+        <scene sceneID="dQp-FX-OFQ">
+            <objects>
+                <viewController id="tzb-RF-Vc1" customClass="ImagesForThemeCarouselViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjO-2j-oC6">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Photo" id="bwH-r2-Zz4"/>
+                    <connections>
+                        <segue destination="eOX-OG-IEl" kind="push" identifier="show detail view" id="eOd-Q1-YDH"/>
+                        <segue destination="Ggx-vA-yls" kind="push" identifier="buyviewcontroller" id="tfg-LN-F6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CU-jd-msJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563" y="-672"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="edi-XZ-exC">
+            <objects>
+                <viewController id="eOX-OG-IEl" customClass="ImageDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGn-Ci-V7w">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="DNf-BN-PCX">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3oc-oY-A6W">
+                                <rect key="frame" x="20" y="36" width="440" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x1F-gB-nVe">
+                        <barButtonItem key="rightBarButtonItem" title="Play" id="JGf-S2-cPX"/>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="DNf-BN-PCX" id="uQv-xr-74x"/>
+                        <outlet property="mazeDetail" destination="3oc-oY-A6W" id="RtJ-L9-F6V"/>
+                        <segue destination="2" kind="push" identifier="start game" id="Eg7-gX-B7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTR-9i-XnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2266" y="-1192"/>
+        </scene>
+        <!--Game Style View Controller-->
+        <scene sceneID="hfE-rz-XAg">
+            <objects>
+                <viewController id="FFM-IF-Tt9" customClass="GameStyleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nK9-IS-9lo">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="j0o-Zd-SQG">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rqU-Vr-gzh"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="j0o-Zd-SQG" id="tjl-XX-Ggs"/>
+                        <segue destination="5dN-WS-LgN" kind="push" identifier="go to dificulty" id="7mc-H8-KA6"/>
+                        <segue destination="Wo0-Gw-0is" kind="push" identifier="resumeGame" id="pPG-9h-kvb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpe-Se-Ps1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="-1041"/>
+        </scene>
+        <!--Difficulty View Controller - Dificuldade-->
+        <scene sceneID="IT4-8e-pZV">
+            <objects>
+                <viewController id="5dN-WS-LgN" customClass="DifficultyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjY-JX-8zF">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="q2P-n2-DDp">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dificuldade" id="bpR-Ng-bBk"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="q2P-n2-DDp" id="weq-WW-ttv"/>
+                        <segue destination="1Uu-oz-xSc" kind="push" identifier="choose theme" id="dyn-D1-aGS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTH-qg-1hS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="-688"/>
+        </scene>
+        <!--Game View Controller - Game-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="GameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="redraw" id="3">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" bounces="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" id="foz-8U-wFF">
+                                <rect key="frame" x="0.0" y="29" width="235" height="271"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="b3V-7Q-eqA" customClass="MazeView">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" id="bKI-6e-pCP">
+                                <rect key="frame" x="245" y="29" width="235" height="271"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="mFV-JB-gg1" customClass="MazeView">
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game" id="ki7-lA-WeV"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="leftImageView" destination="b3V-7Q-eqA" id="Lwx-OA-OMg"/>
+                        <outlet property="leftScrollView" destination="foz-8U-wFF" id="9El-q7-yiu"/>
+                        <outlet property="rightImageView" destination="mFV-JB-gg1" id="Cd0-lS-CwP"/>
+                        <outlet property="rightScrollView" destination="bKI-6e-pCP" id="Fhf-6d-XGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="-784"/>
+        </scene>
+        <!--Buy Details View Controller-->
+        <scene sceneID="zU5-5o-Ilo">
+            <objects>
+                <viewController id="CEX-ii-7VS" customClass="BuyDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPf-is-cD4">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="HNK-dx-FN5">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7GY-pH-C3m"/>
+                    <connections>
+                        <outlet property="imageview" destination="HNK-dx-FN5" id="DKf-7k-gHR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vzx-m8-vGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039" y="-38"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="AqJ-QW-8cO">
+            <objects>
+                <viewController id="6Cs-j3-bIU" customClass="SplashViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpq-Za-umP">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="8Ck-Fo-duq">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x7U-2m-gcp"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imageview" destination="8Ck-Fo-duq" id="22L-m4-QT1"/>
+                        <segue destination="mm2-0f-hmP" kind="push" identifier="show inicial view" id="CWz-Ca-hat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1Y-MZ-gBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2526" y="-232"/>
+        </scene>
+        <!--Gamecenter View Controller-->
+        <scene sceneID="ws5-i3-biA">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="ZgW-tp-e3L" customClass="gamecenterViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xOc-42-NZA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Cs-j3-bIU" kind="relationship" relationship="rootViewController" id="Wkd-bF-56n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rf-3X-jf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3232" y="-232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iDifferences-Login@2x.png" width="346" height="73"/>
+        <image name="iDifferences-Recover-Password-button@2x.png" width="346" height="73"/>
+        <image name="iDifferences-Sign-Up@2x.png" width="346" height="73"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="5ep-fb-cgd"/>
+        <segue reference="eOd-Q1-YDH"/>
+        <segue reference="tfg-LN-F6T"/>
+        <segue reference="bB7-7q-hDH"/>
+        <segue reference="taO-fD-YRB"/>
+    </inferredMetricsTieBreakers>
+</document>
